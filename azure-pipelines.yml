@@ -15,3 +15,18 @@ steps:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
 
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '/home/azureuser/myagent/_work/r1/a/build'
+    Contents: '**'
+    TargetFolder: '/home/azureuser/myagent/_work/r1/a'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '/home/azureuser/myagent/_work/r1/a'
+    ArtifactName: 'dropuni'
+    publishLocation: 'Container'
