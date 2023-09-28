@@ -23,7 +23,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '/home/vsts/work/1/s/build'
+    SourceFolder: '/home/vsts/work/1/r1/build'
     Contents: '**'
     TargetFolder: '/home/vsts/work/1/a'
 - task: PublishBuildArtifacts@1
