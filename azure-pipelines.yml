@@ -25,9 +25,9 @@ steps:
   inputs:
     SourceFolder: '/home/vsts/work/1/s/build'
     Contents: '**'
-    TargetFolder: '/home/vsts/work/1/a'
+    TargetFolder: '/home/copy'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '/home/vsts/work/1/a'
+    PathtoPublish: '/home/copy'
     ArtifactName: 'dropuni'
     publishLocation: 'Container'
