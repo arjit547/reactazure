@@ -18,11 +18,12 @@ steps:
 - script: |
     npm install
     npm run build
+    pwd
   displayName: 'npm install and build'
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '/home/azureuser/myagent/_work/r1/a/build'
+    SourceFolder: '/home/azureuser/myagent/work/r1/a/build'
     Contents: '**'
     TargetFolder: '/home/azureuser/myagent/_work/r1/a'
 - task: PublishBuildArtifacts@1
